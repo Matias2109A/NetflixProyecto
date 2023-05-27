@@ -1,0 +1,319 @@
+:root {
+    --rojo: #E50914;
+    --fondo: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header { 
+    padding: 30px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logontf {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #aaa
+}
+
+
+/* Pelicula Principal */
+
+.pel-princ {
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .5) 50%, rgba(0, 0, 0, .5) 100%), url(img/banner.jpeg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+
+.pel-princ .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.pel-princ .titulo {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.pel-princ .desc {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.pel-princ .boton {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.pel-princ .boton i {
+    margin-right: 1.25em;
+}
+
+.pel-princ .boton:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Contenedor titulos controles */
+
+.contenedor-titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+    background-color: var(--rojo);
+}
+
+/* Contenedor principal & Flechas */
+
+.pelis-reco {
+    margin-bottom: 70px;
+}
+
+.pelis-reco .contenedor-princ {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.pelis-reco .contenedor-princ .boton-izq,
+.pelis-reco .contenedor-princ .boton-der {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.pelis-reco .contenedor-princ .boton-izq {
+    left: 0;
+}
+
+.pelis-reco .contenedor-princ .boton-der {
+    right: 0;
+}
+
+.pelis-reco .contenedor-princ .boton-izq:hover,
+.pelis-reco .contenedor-princ .boton-der:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+
+/* Carousel */
+
+.pelis-reco .contenedor-carousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.pelis-reco .contenedor-carousel .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+}
+
+.pelis-reco .contenedor-carousel .carousel .pelicula {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.pelis-reco .contenedor-carousel .carousel .pelicula.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.pelis-reco .contenedor-carousel .carousel .pelicula img{
+    width: 100%;
+    vertical-align: top;
+}
+
+/* Serie */
+
+.contenedor-titulo {
+    width: 48%;
+    margin: auto;
+}
+
+.t-serie {
+    position: inherit;
+    font-size: 5em;
+    display: flex;
+    text-align: center;
+    margin-bottom: 1.9em;
+    margin-top: 2em;
+}
+
+.contenedor-titulo .desc-ser {
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5em;
+}
+
+.desc-serie {
+    font-size: 1em;
+}
+
+.capitulos {
+    color: #fff; 
+}
+
+.capitulos .cap-serie img{
+    width: 20%;
+    height: 12%;
+    padding: 1em;
+    filter: brightness(50%);
+}
+
+.capitulos .desc-cap {
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+.capitulos .desc-cap1,
+.capitulos .desc-cap2,
+.capitulos .desc-cap3,
+.capitulos .desc-cap4,
+.capitulos .desc-cap5,
+.capitulos .desc-cap6,
+.capitulos .desc-cap7,
+.capitulos .desc-cap8,
+.capitulos .desc-cap9,
+.capitulos .desc-cap10,
+.capitulos .desc-cap11,
+.capitulos .desc-cap12 {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+.capitulos .boton-repr {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.53em 0.53em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.capitulos .boton-repr i {
+    margin-right: 1.25em;
+}
+
+.capitulos .boton-repr:hover {
+    background: #fff;
+    color: #000;
+}
+
+footer .contenedor-footer {
+    color: #fff;
+    font-size: 1em;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 800px) {
+    header .logontf {
+        margin-bottom: 10px;
+    }
+
+    header .contenedor {
+        flex-direction: column;
+    }
+
+    .pelis-reco .contenedor-carousel {
+        overflow: visible;
+    }
+    
+    .pelis-reco .contenedor-carousel .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .pelis-reco .indicadores,
+    .pelis-reco .boton-der,
+    .pelis-reco .boton-izq {
+        display: none;
+    }
+}
